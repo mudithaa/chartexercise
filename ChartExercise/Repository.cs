@@ -73,7 +73,7 @@ namespace ChartExercise
         public string DateDisplay {
             get
             {
-                return SalesDate.ToString("dd-MMM-yyyy");
+                return SalesDate.ToString("dd/MM/yyyy");
             }
         }
     }
