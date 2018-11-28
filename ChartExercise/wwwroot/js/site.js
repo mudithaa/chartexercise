@@ -61,28 +61,15 @@ app.controller('salesController', ['$scope', '$http', function ($scope, $http) {
                 type: "column",
                 labels: {
                     visible: true,
-                    background: "transparent"
                 }
             },
             series: [{
                 field: "totalSalesValue",
-                categoryField: "salesDate",
-                colorField: "userColor"
+                categoryField: "salesDate"
             }],
             valueAxis: {
-                max: 28,
-                majorGridLines: {
-                    visible: false
-                },
-                visible: false
             },
             categoryAxis: {
-                majorGridLines: {
-                    visible: false
-                },
-                line: {
-                    visible: false
-                }
             }
         });
     }
