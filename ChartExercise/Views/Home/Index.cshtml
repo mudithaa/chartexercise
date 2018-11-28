@@ -6,13 +6,13 @@
     <p></p>
     <label>Product Category</label>
     
-    <select ng-model="selectedCategory" ng-change="changeProducts()" class="form-control">
+    <select ng-model="selectedCategory" ng-change="changeCategory()" class="form-control">
         <option ng-repeat="x in categories" value="{{x}}">{{x}}</option>
         <option value=""> Select Category </option>
     </select>
     <p></p>
     <label>Products</label>
-    <select ng-model="selectedProduct" class="form-control">
+    <select ng-model="selectedProduct" ng-change="selectProduct()" class="form-control">
         <option ng-repeat="product in products" value="{{product.productId}}">{{product.productDescription}}</option>
         <option value=""> Select Product </option>
     </select>

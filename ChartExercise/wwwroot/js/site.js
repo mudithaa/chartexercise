@@ -8,6 +8,8 @@ var app = angular.module('app', []);
 app.controller('salesController', ['$scope', '$http', function ($scope, $http) {
     $scope.selectedCategory = "";
     $scope.categories = [];        
+    $scope.sales = [];
+    $scope.selectedProduct = {};
 
     function getCategories() {
         $http.get('/api/sales/categories')
@@ -24,8 +26,20 @@ app.controller('salesController', ['$scope', '$http', function ($scope, $http) {
             });
     };
 
-    $scope.changeProducts = function () {
+    function getSales(productId) {
+        $scope.sales = [];
+        return $http.get('/api/sales/' + productId)
+            .then(function (result) {
+                $scope.sales = result.data;
+            });
+    };
+
+    $scope.changeCategory = function () {
         getProducts(this.selectedCategory);
+    }
+
+    $scope.selectProduct = function () {
+        getSales(this.selectedProduct);
     }
         
     $scope.init = function () {

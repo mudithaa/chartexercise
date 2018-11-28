@@ -12,9 +12,8 @@ namespace ChartExercise
     // lots of repeated code. only focusing on the functionality
     public class Repository
     {
-        const string _connectionString = "Server=summitdevtest.database.windows.net;Database=devtest;User Id=fillin;Password='fillin';";
+        const string _connectionString = "Server=summitdevtest.database.windows.net;Database=devtest;User Id=summitdev;Password='hjuOc57kO8;';";
         const string _salesSummaryStoredProcedure = "ssp_GetSummaryByProduct";
-
         public IEnumerable<SalesModel> GetSales(int productId)
         {
             IEnumerable<SalesModel> result;
