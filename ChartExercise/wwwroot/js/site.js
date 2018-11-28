@@ -31,6 +31,8 @@ app.controller('salesController', ['$scope', '$http', function ($scope, $http) {
         return $http.get('/api/sales/' + productId)
             .then(function (result) {
                 $scope.sales = result.data;
+                $(document).ready(createChart);
+                
             });
     };
 
@@ -44,18 +46,13 @@ app.controller('salesController', ['$scope', '$http', function ($scope, $http) {
         
     $scope.init = function () {
         getCategories();
-        $(document).ready(createChart);
-        $(document).bind("kendo:skinChange", createChart);
+        
     };
 
     function createChart() {
         $("#chart").kendoChart({
             dataSource: {
-                data: blogComments
-            },
-            title: {
-                align: "left",
-                text: "Comments per day"
+                data: this.sales
             },
             legend: {
                 visible: false
@@ -68,8 +65,8 @@ app.controller('salesController', ['$scope', '$http', function ($scope, $http) {
                 }
             },
             series: [{
-                field: "value",
-                categoryField: "day",
+                field: "totalSalesValue",
+                categoryField: "salesDate",
                 colorField: "userColor"
             }],
             valueAxis: {

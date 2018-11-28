@@ -64,7 +64,7 @@ using ChartExercise.Models;
             WriteLiteral("\r\n<div class=\"form-group\">\r\n    <p></p>\r\n    <label>Product Category</label>\r\n    \r\n    <select ng-model=\"selectedCategory\" ng-change=\"changeCategory()\" class=\"form-control\">\r\n        ");
             EndContext();
             BeginContext(229, 64, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6f2fb4181156404ab715f8a5a3528d76", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b0dc834647aa41c388882eeba8408a02", async() => {
                 BeginContext(279, 5, true);
                 WriteLiteral("{{x}}");
                 EndContext();
@@ -87,7 +87,7 @@ using ChartExercise.Models;
             WriteLiteral("\r\n        ");
             EndContext();
             BeginContext(303, 43, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fb8d7efaa08e43168bca694d003ae862", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "49a412f2e09740bb87fa9f163749e637", async() => {
                 BeginContext(320, 17, true);
                 WriteLiteral(" Select Category ");
                 EndContext();
@@ -109,7 +109,7 @@ using ChartExercise.Models;
             WriteLiteral("\r\n    </select>\r\n    <p></p>\r\n    <label>Products</label>\r\n    <select ng-model=\"selectedProduct\" ng-change=\"selectProduct()\" class=\"form-control\">\r\n        ");
             EndContext();
             BeginContext(503, 109, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40355e1a1bce498f8ce098d52af153f8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5d5005e5776f404eaee6906b28a18618", async() => {
                 BeginContext(573, 30, true);
                 WriteLiteral("{{product.productDescription}}");
                 EndContext();
@@ -132,7 +132,7 @@ using ChartExercise.Models;
             WriteLiteral("\r\n        ");
             EndContext();
             BeginContext(622, 42, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8abe8dffbb994417bfc2bacf5493c80a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d669207dad464f16b1b29e5c059d5f4d", async() => {
                 BeginContext(639, 16, true);
                 WriteLiteral(" Select Product ");
                 EndContext();

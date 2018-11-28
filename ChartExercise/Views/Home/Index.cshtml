@@ -5,7 +5,7 @@
 <div class="form-group">
     <p></p>
     <label>Product Category</label>
-    
+
     <select ng-model="selectedCategory" ng-change="changeCategory()" class="form-control">
         <option ng-repeat="x in categories" value="{{x}}">{{x}}</option>
         <option value=""> Select Category </option>
@@ -16,4 +16,9 @@
         <option ng-repeat="product in products" value="{{product.productId}}">{{product.productDescription}}</option>
         <option value=""> Select Product </option>
     </select>
+    <p>
+
+    </p>
+
+    <div id="chart"></div>
 </div>
