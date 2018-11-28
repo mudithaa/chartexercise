@@ -70,5 +70,11 @@ namespace ChartExercise
         public decimal TotalSalesValue { get; set; }
         public int TotalQuantity { get; set; }
         public DateTime SalesDate { get; set; }
+        public string DateDisplay {
+            get
+            {
+                return SalesDate.ToString("dd-MMM-yyyy");
+            }
+        }
     }
 }

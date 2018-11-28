@@ -31,8 +31,7 @@ app.controller('salesController', ['$scope', '$http', function ($scope, $http) {
         return $http.get('/api/sales/' + productId)
             .then(function (result) {
                 $scope.sales = result.data;
-                $(document).ready(createChart);
-                
+                createChart(result.data);              
             });
     };
 
@@ -45,32 +44,21 @@ app.controller('salesController', ['$scope', '$http', function ($scope, $http) {
     }
         
     $scope.init = function () {
-        getCategories();
-        
+        getCategories();        
     };
 
-    function createChart() {
+    function createChart(salesData) {
         $("#chart").kendoChart({
             dataSource: {
-                data: this.sales
-            },
-            legend: {
-                visible: false
+                data: salesData
             },
             seriesDefaults: {
-                type: "column",
-                labels: {
-                    visible: true,
-                }
+                type: "column",                
             },
             series: [{
                 field: "totalSalesValue",
-                categoryField: "salesDate"
-            }],
-            valueAxis: {
-            },
-            categoryAxis: {
-            }
+                categoryField: "dateDisplay"
+            }]
         });
     }
 }]);
